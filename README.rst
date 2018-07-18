@@ -7,6 +7,8 @@ Overview
 .. list-table::
     :stub-columns: 1
 
+    * - docs
+      - | |docs|
     * - tests
       - | |travis| |appveyor| |requires|
         | |coveralls| |codecov|
@@ -14,6 +16,10 @@ Overview
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
+
+.. |docs| image:: https://readthedocs.org/projects/python-s3hasher/badge/?style=flat
+    :alt: Documentation Status
+    :target: https://readthedocs.org/projects/python-s3hasher
 
 .. |travis| image:: https://travis-ci.org/jpvlsmv/python-s3hasher.svg?branch=master
     :alt: Travis-CI Build Status
