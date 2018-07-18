@@ -51,9 +51,9 @@ Overview
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/s3hasher
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/jpvlsmv/python-s3hasher/v0.1.0.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/jpvlsmv/python-s3hasher/v0.1.1.svg
     :alt: Commits since latest release
-    :target: https://github.com/jpvlsmv/python-s3hasher/compare/v0.1.0...master
+    :target: https://github.com/jpvlsmv/python-s3hasher/compare/v0.1.1...master
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/s3hasher.svg
     :alt: PyPI Wheel
