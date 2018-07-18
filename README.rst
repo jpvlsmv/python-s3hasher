@@ -7,8 +7,6 @@ Overview
 .. list-table::
     :stub-columns: 1
 
-    * - docs
-      - |docs|
     * - tests
       - | |travis| |appveyor| |requires|
         | |coveralls| |codecov|
@@ -16,10 +14,6 @@ Overview
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
-
-.. |docs| image:: https://readthedocs.org/projects/python-s3hasher/badge/?style=flat
-    :target: https://readthedocs.org/projects/python-s3hasher
-    :alt: Documentation Status
 
 .. |travis| image:: https://travis-ci.org/jpvlsmv/python-s3hasher.svg?branch=master
     :alt: Travis-CI Build Status
@@ -35,7 +29,7 @@ Overview
 
 .. |coveralls| image:: https://coveralls.io/repos/jpvlsmv/python-s3hasher/badge.svg?branch=master&service=github
     :alt: Coverage Status
-    :target: https://coveralls.io/r/jpvlsmv/python-s3hasher
+    :target: https://coveralls.io/github/jpvlsmv/python-s3hasher
 
 .. |codecov| image:: https://codecov.io/github/jpvlsmv/python-s3hasher/coverage.svg?branch=master
     :alt: Coverage Status
@@ -46,7 +40,7 @@ Overview
     :alt: Code Quality Status
 
 .. |codacy| image:: https://img.shields.io/codacy/REPLACE_WITH_PROJECT_ID.svg
-    :target: https://www.codacy.com/app/jpvlsmv/python-s3hasher
+    :target: https://app.codacy.com/project/jpvlsmv/python-s3hasher/dashboard
     :alt: Codacy Code Quality Status
 
 .. |codeclimate| image:: https://codeclimate.com/github/jpvlsmv/python-s3hasher/badges/gpa.svg
@@ -93,8 +87,6 @@ Installation
 
 Documentation
 =============
-
-https://python-s3hasher.readthedocs.io/
 
 Development
 ===========
