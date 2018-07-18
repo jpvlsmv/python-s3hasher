@@ -1,23 +1,36 @@
-"""
-Module that contains the command line app.
+#!/usr/bin/env python3
 
-Why does this file exist, and why not put this in __main__?
+import hashlib
+import sys
+from io import BytesIO
 
-  You might be tempted to import things from __main__ later, but that will cause
-  problems: the code will get executed twice:
-
-  - When you run `python -ms3hasher` python will execute
-    ``__main__.py`` as a script. That means there won't be any
-    ``s3hasher.__main__`` in ``sys.modules``.
-  - When you import __main__ it will get executed again (as a module) because
-    there's no ``s3hasher.__main__`` in ``sys.modules``.
-
-  Also see (1) from http://click.pocoo.org/5/setuptools/#setuptools-integration
-"""
+import boto3
 import click
+
+assert sys.version_info >= (3, 6)
 
 
 @click.command()
-@click.argument('names', nargs=-1)
-def main(names):
-    click.echo(repr(names))
+@click.option('--limit',  '-l', default=50,   help='Limit number of files checked')
+@click.option('--bucket', '-b', default=None, help='bucket name')
+def main(limit, bucket):
+    s3 = boto3.resource('s3')
+    if bucket is None:
+        bucketlist = s3.buckets.all()
+    else:
+        bucketlist = [s3.Bucket(bucket)]
+    for bucket in bucketlist:
+        print(bucket.name)
+        for obj in bucket.objects.all().limit(limit):
+            if obj.key.endswith('/'):
+                print(f'\tDirectory {obj.key}')
+            else:
+                resp = obj.get()
+                h = hashlib.sha256()
+                for f in BytesIO(resp["Body"].read()):
+                    h.update(f)
+                click.echo(f'\t\t{h.hexdigest()}  {obj.key}\n')
+
+
+if __name__ == '__main__':
+    main()
