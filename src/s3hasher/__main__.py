@@ -10,5 +10,5 @@ Why does this file exist, and why __main__? For more info, read:
 """
 from s3hasher.cli import main
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__":   # pragma: no cover
+    main()                   # pragma: no cover
