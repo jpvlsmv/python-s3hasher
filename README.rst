@@ -93,6 +93,9 @@ Installation
 
 Documentation
 =============
+Is available online_.
+
+.. _online: https://python-s3hasher.readthedocs.io/en/latest/
 
 Development
 ===========
