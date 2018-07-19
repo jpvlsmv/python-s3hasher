@@ -8,7 +8,7 @@ Overview
     :stub-columns: 1
 
     * - docs
-      - | |docs|
+      - | |docs| 
     * - tests
       - | |travis| |appveyor| |requires|
         | |coveralls| |codecov|
@@ -93,6 +93,9 @@ Installation
 
 Documentation
 =============
+Is available online_.
+
+.. _online: https://python-s3hasher.readthedocs.io/en/latest/
 
 Development
 ===========
